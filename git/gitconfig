@@ -1,0 +1,26 @@
+[user]
+	name = Chalise Grogan
+	email = chalisegrogan@gmail.com
+[push]
+	default = tracking
+[color]
+	ui = auto
+        branch = auto
+        diff = auto
+        status = auto
+[color "branch"]
+        current = pink
+        local = purple
+        remote = blue
+[color "diff"]
+        meta = yellow bold
+        frag = magenta bold
+        old = red bold
+        new = green bold
+[color "status"]
+        added = green
+        changed = magenta
+[filter "lfs"]
+	clean = git-lfs clean %f
+	smudge = git-lfs smudge %f
+	required = true
