@@ -8,9 +8,10 @@
         branch = auto
         diff = auto
         status = auto
+	interactive = true
 [color "branch"]
-        current = pink
-        local = purple
+        current = cyan
+        local = magenta
         remote = blue
 [color "diff"]
         meta = yellow bold
