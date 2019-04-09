@@ -3,6 +3,10 @@
 	email = chalisegrogan@gmail.com
 [push]
 	default = tracking
+[alias]
+	gg = grep --break --heading --line-number
+	ga = !"git rev-list --all | xargs git grep '$1'"
+	lg = log --pretty=format:"%C(yellow bold)%h%Cred%d %Creset%s%Cgreen [%cn]" --decorate
 [color]
 	ui = auto
         branch = auto
