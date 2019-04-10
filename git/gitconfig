@@ -1,12 +1,11 @@
 [user]
 	name = Chalise Grogan
-	email = chalisegrogan@gmail.com
+	email = chaliseg@23andme.com
 [push]
-	default = tracking
+	default = current
 [alias]
-	gg = grep --break --heading --line-number
-	ga = !"git rev-list --all | xargs git grep '$1'"
-	lg = log --pretty=format:"%C(yellow bold)%h%Cred%d %Creset%s%Cgreen [%cn]" --decorate
+	ggroup = grep --break --heading --line-number
+	gall = !"git rev-list --all | xargs git grep '$1'"
 [color]
 	ui = auto
         branch = auto
@@ -14,18 +13,29 @@
         status = auto
 	interactive = true
 [color "branch"]
-        current = cyan
+        current = white bold
         local = magenta
-        remote = blue
+        remote = cyan
 [color "diff"]
         meta = yellow bold
         frag = magenta bold
         old = red bold
         new = green bold
 [color "status"]
+        branch = yellow bold
         added = green
         changed = magenta
+[color "grep"]
+        match = magenta bold
+        filename = yellow
+        linenumber = cyan bold
 [filter "lfs"]
 	clean = git-lfs clean %f
 	smudge = git-lfs smudge %f
 	required = true
+[pull]
+	default = current
+[grep]
+	lineNumber = true
+[format]
+        pretty = "%C(magenta bold)%h%C(cyan)%d %Creset%s%Cgreen [%cn]"
