@@ -1,15 +1,3 @@
-function release-notes {
-    $(git fetch --tags)
-    recentReleaseName=$(git describe --tags `git rev-list --tags --max-count=1`)
-    recentReleaseHash=$(git rev-parse $recentReleaseName)
-    $(git log $recentReleaseHash..HEAD --pretty=oneline | awk '{first = $1; $1 = ""; print " -" $0; }' | pbcopy)
-    echo "Copied to clipboard or something."
-}
-
-# virtualenv
-export WORKON_HOME=~/virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
-
 # the following is from https://natelandau.com/my-mac-osx-bash_profile/
 # make terminal better
 alias cp='cp -iv'                           # Preferred 'cp' implementation
@@ -37,5 +25,13 @@ alias cic='set completion-ignore-case On'   # cic:          Make tab-completion 
 mcd () { mkdir -p "$1" && cd "$1"; }        # mcd:          Makes new Dir and jumps inside
 trash () { command mv "$@" ~/.Trash ; }     # trash:        Moves a file to the MacOS trash
 ql () { qlmanage -p "$*" >& /dev/null; }    # ql:           Opens any file in MacOS Quicklook Preview
+alias gg='git grep -I --ignore-case --line-number --full-name --color --break --heading --show-function' # gg - git grep with pretty
+alias cod='git checkout develop'            # It keeps tripping me up that the main branch name is develop
 alias DT='tee ~/Desktop/terminalOut.txt'    # DT:           Pipe content to file on MacOS Desktop
-
+alias loads='BOPhenotypicSurvey.load_all()' # For use within iPython
+alias vhp='vagrant halt && vagrant up --provision' # Restart the vagrant box
+alias vss='vagrant ssh'                     # SSH into Vagrant box, just a time saver
+export PATH="$(pyenv root)/libexec:$PATH"
+export PATH="$(pyenv root)/libexec/pyenv:$PATH"
+export PATH="$PATH:/opt/yarn-1.7.0/bin"
+export PATH="/usr/local/opt/openssl/bin:$PATH"
