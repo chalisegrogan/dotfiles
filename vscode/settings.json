@@ -2,15 +2,15 @@
     "workbench.colorTheme": "Monokai",
     "window.zoomLevel": 1,
     "files.insertFinalNewline": true,
+    "files.associations": {
+        "*.dtml": "django-html",
+        "*.jsx": "javascriptreact"
+    },
     "prettier.tabWidth": 4,
     "prettier.singleQuote": true,
     "prettier.bracketSpacing": true,
     "prettier.trailingComma": "es5",
     "files.trimTrailingWhitespace": true,
-    "gitlens.advanced.messages": {
-        "suppressShowKeyBindingsNotice": true
-    },
-    "gitlens.historyExplorer.enabled": false,
     "editor.quickSuggestions": {
         "other": true,
         "comments": true,
@@ -22,8 +22,20 @@
         "document",
     ],
     "javascript.updateImportsOnFileMove.enabled": "always",
-    "gitlens.views.fileHistory.enabled": false,
-    "gitlens.views.lineHistory.enabled": false,
     "explorer.confirmDelete": false,
     "editor.snippetSuggestions": "top",
+    "editor.suggestSelection": "first",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.settings.editor": "json",
+    "workbench.iconTheme": "vscode-icons",
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "python.languageServer": "Microsoft",
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "vscode.typescript-language-features"
+    },
+    "editor.accessibilitySupport": "off",
+    "vsicons.dontShowNewVersionMessage": true,
+
 }
